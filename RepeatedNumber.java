@@ -2,14 +2,23 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class RepeatedNumber {
+	private static void print(int i) {
+		System.out.println(i);
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		HashSet hs = new HashSet<>();
+		int[] arr = new int[n];
 		for(int i=0;i<n;i++) {
-			hs.add(sc.nextInt());
+			arr[i] = sc.nextInt();
 		}
-		System.out.println(hs);
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]==arr[j])
+					print(arr[i]);
+				
+			}
+		}
 	}
-
 }
